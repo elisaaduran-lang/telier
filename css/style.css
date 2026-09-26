@@ -1074,7 +1074,40 @@ footer {
     gap: 15px;
     margin-top: 70px;
   }
+/* =========================================================
+   TELIER — HERO ORB
+========================================================= */
 
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+
+  background: #B6FF3B;
+
+  filter: blur(90px);
+  opacity: 0.72;
+
+  left: var(--orb-x, 50%);
+  top: var(--orb-y, 45%);
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
   .footer-bottom {
     flex-direction: column;
     gap: 10px;
