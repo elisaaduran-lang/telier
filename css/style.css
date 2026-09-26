@@ -1135,3 +1135,17 @@ footer {
 .project:hover .project-media {
   transform: scale(1.04);
 }
+/* =========================================================
+   ABOUT — ELISA MEDIA
+========================================================= */
+
+.about-media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image {
+  overflow: hidden;
+}
