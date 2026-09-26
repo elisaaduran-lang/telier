@@ -290,4 +290,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-});
+  /* -------------------------------------------------------
+     HERO — MOVING NEON ORB
+  ------------------------------------------------------- */
+
+  const hero = document.querySelector(".hero");
+
+  if (hero) {
+
+    let mouseX = window.innerWidth * 0.5;
+    let mouseY = window.innerHeight * 0.45;
+
+    let orbX = mouseX;
+    let orbY = mouseY;
+
+    let time = 0;
+
+    const updateOrb = () => {
+
+      time += 0.008;
+
+      // Movimiento suave y orgánico
+      const floatX = Math.sin(time) * 35;
+      const floatY = Math.cos(time * 0.8) * 25;
+
+      // Seguimiento suave del cursor
+      orbX += (mouseX - orbX) * 0.035;
+      orbY += (mouseY - orbY) * 0.035;
+
+      const rect = hero.getBoundingClientRect();
+
+      const x = ((orbX - rect.left + floatX) / rect.width) * 100;
+      const y = ((orbY - rect.top + floatY) / rect.height) * 100;
+
+      hero.style.setProperty("--orb-x", `${x}%`);
+      hero.style.setProperty("--orb-y", `${y}%`);
+
+      requestAnimationFrame(updateOrb);
+    };
+
+    document.addEventListener("mousemove", (event) => {
+      mouseX = event.clientX;
+      mouseY = event.clientY;
+    });
+
+    document.addEventListener("touchmove", (event) => {
+
+      if (!event.touches.length) return;
+
+      mouseX = event.touches[0].clientX;
+      mouseY = event.touches[0].clientY;
+
+    }, { passive: true });
+
+    updateOrb();
+  }});
