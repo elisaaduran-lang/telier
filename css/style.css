@@ -1139,17 +1139,7 @@ footer {
    ABOUT — ELISA MEDIA
 ========================================================= */
 
-.about-media {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.about-image {
-  overflow: hidden;
-}
-/* LAITER — formato original 1080x1350 */
+/* LAITER — formato 1080x1350 */
 .project-laiter .project-image {
   aspect-ratio: 4 / 5;
 }
