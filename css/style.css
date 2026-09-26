@@ -485,7 +485,11 @@ img {
   font-size: 30px;
   transition: transform .5s var(--transition);
 }
-
+/* Flecha normal, no emoji en móvil */
+.service-arrow {
+  font-family: Arial, sans-serif;
+  font-variant-emoji: text;
+}
 .service:hover .service-arrow {
   transform: rotate(45deg);
 }
