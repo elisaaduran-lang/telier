@@ -17,12 +17,31 @@
     href="./css/style.css?v=2"
   >
 
-  <!-- FIX CATEGORY -->
   <style>
-    .category-title {
-      font-size: 200px !important;
-      color: red !important;
+
+    .web-preview {
+      overflow: hidden;
+      background: #111;
+      position: relative;
     }
+
+    .web-preview iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 650px;
+      border: 0;
+      display: block;
+      background: #fff;
+    }
+
+    @media (max-width: 800px) {
+
+      .web-preview iframe {
+        min-height: 500px;
+      }
+
+    }
+
   </style>
 
 </head>
@@ -64,8 +83,13 @@
     <section class="category-hero">
 
       <div class="category-hero-meta">
+
         <span>02 / SERVICES</span>
-        <span>WEB / DIGITAL / EXPERIENCE</span>
+
+        <span>
+          WEB / DIGITAL / EXPERIENCE
+        </span>
+
       </div>
 
 
@@ -93,6 +117,7 @@
     </section>
 
 
+
     <!-- PROJECTS -->
 
     <section class="category-projects">
@@ -100,15 +125,19 @@
 
       <div class="category-projects-header">
 
-        <span>SELECTED WORK</span>
+        <span>
+          SELECTED WORK
+        </span>
 
-        <span>03 PROJECTS</span>
+        <span>
+          03 PROJECTS
+        </span>
 
       </div>
 
 
 
-      <!-- PROJECT 01 -->
+      <!-- PROJECT 01 — ATELIER -->
 
       <article
         class="category-project project-featured"
@@ -120,11 +149,13 @@
         </div>
 
 
-        <div class="category-project-image project-placeholder">
+        <div class="category-project-image web-preview">
 
-          <div class="placeholder-label">
-            ATELIER
-          </div>
+          <iframe
+            src="https://script.google.com/a/macros/lacasadelascarcasas.es/s/AKfycbzrqW_yeNHTAv-VlYU9r_YOHAl-CBcjGV40aYBwbVn__PJIrfFsSrhbYNqpNIBzsWBy/exec?country=ES"
+            title="ATELIER"
+            loading="lazy"
+          ></iframe>
 
         </div>
 
@@ -133,7 +164,9 @@
 
           <div>
 
-            <h2>ATELIER</h2>
+            <h2>
+              ATELIER
+            </h2>
 
             <span>
               WEB / DIGITAL EXPERIENCE / COLLECTIONS
@@ -141,7 +174,9 @@
 
           </div>
 
-          <span class="project-arrow">↗</span>
+          <span class="project-arrow">
+            ↗
+          </span>
 
         </div>
 
@@ -149,7 +184,7 @@
 
 
 
-      <!-- PROJECT 02 -->
+      <!-- PROJECT 02 — MY LITTLE PET -->
 
       <article
         class="category-project project-offset"
@@ -161,11 +196,13 @@
         </div>
 
 
-        <div class="category-project-image project-placeholder">
+        <div class="category-project-image web-preview">
 
-          <div class="placeholder-label">
-            MY LITTLE PET
-          </div>
+          <iframe
+            src="https://script.google.com/macros/s/AKfycbxMWhurpwSTnn43n2yNwdiPRKUpqdmfc5axs061gHelNAep0CRwL7n_qs_Y13hFJMgcIQ/exec?country=ES"
+            title="My Little Pet"
+            loading="lazy"
+          ></iframe>
 
         </div>
 
@@ -174,7 +211,9 @@
 
           <div>
 
-            <h2>MY LITTLE PET</h2>
+            <h2>
+              MY LITTLE PET
+            </h2>
 
             <span>
               WEB / INTERACTIVE EXPERIENCE / DIGITAL
@@ -182,7 +221,9 @@
 
           </div>
 
-          <span class="project-arrow">↗</span>
+          <span class="project-arrow">
+            ↗
+          </span>
 
         </div>
 
@@ -190,7 +231,7 @@
 
 
 
-      <!-- PROJECT 03 -->
+      <!-- PROJECT 03 — IPHONE 18 -->
 
       <article
         class="category-project project-featured"
@@ -202,11 +243,13 @@
         </div>
 
 
-        <div class="category-project-image project-placeholder">
+        <div class="category-project-image web-preview">
 
-          <div class="placeholder-label">
-            IPHONE 18
-          </div>
+          <iframe
+            src="https://script.google.com/a/macros/lacasadelascarcasas.es/s/AKfycbxWTNwngdSzbUOpvltMVgsb5WYEIXs4U8SVTklZ84JT1tOjZbXoJhfN98b8FRLlhRg_/exec/es"
+            title="iPhone 18"
+            loading="lazy"
+          ></iframe>
 
         </div>
 
@@ -215,7 +258,9 @@
 
           <div>
 
-            <h2>IPHONE 18</h2>
+            <h2>
+              IPHONE 18
+            </h2>
 
             <span>
               LANDING PAGE / DIGITAL ART DIRECTION
@@ -223,7 +268,9 @@
 
           </div>
 
-          <span class="project-arrow">↗</span>
+          <span class="project-arrow">
+            ↗
+          </span>
 
         </div>
 
@@ -238,13 +285,17 @@
 
     <section class="category-next">
 
-      <span>NEXT</span>
+      <span>
+        NEXT
+      </span>
 
       <a href="print.html">
 
         PRINT
 
-        <span>↗</span>
+        <span>
+          ↗
+        </span>
 
       </a>
 
@@ -272,6 +323,7 @@
     </div>
 
   </footer>
+
 
 
   <script src="js/script.js"></script>
