@@ -480,16 +480,38 @@ img {
   line-height: 1.3;
 }
 
+
 .service-arrow {
   justify-self: end;
-  font-size: 30px;
+  position: relative;
+  width: 30px;
+  height: 30px;
   transition: transform .5s var(--transition);
 }
-/* Flecha normal, no emoji en móvil */
-.service-arrow {
-  font-family: Arial, sans-serif;
-  font-variant-emoji: text;
+
+.service-arrow::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 5px;
+  right: 5px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
 }
+
+.service-arrow::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 12px;
+  right: 5px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  transform-origin: right center;
+}
+
 .service:hover .service-arrow {
   transform: rotate(45deg);
 }
