@@ -352,23 +352,25 @@ document.addEventListener("DOMContentLoaded", () => {
 ------------------------------------------------------- */
 
 document.addEventListener("DOMContentLoaded", () => {
-
   document.querySelectorAll(".serveo-carousel").forEach((carousel) => {
-
-    const track = carousel.querySelector(".serveo-carousel-track");
-    const images = Array.from(track.querySelectorAll("img"));
+    const images = [...carousel.querySelectorAll(".serveo-carousel-track img")];
     const current = carousel.querySelector(".serveo-current");
     const prev = carousel.querySelector(".serveo-prev");
     const next = carousel.querySelector(".serveo-next");
 
-    if (!track || !images.length || !current || !prev || !next) return;
+    if (!images.length || !current || !prev || !next) return;
 
     let index = 0;
 
     function updateCarousel() {
-      track.style.transform = `translateX(-${index * 100}%)`;
-      current.textContent = String(index + 1).padStart(2, "0");
+      images.forEach((img, i) => {
+        img.style.display = i === index ? "block" : "none";
+        img.style.width = "100%";
+        img.style.height = "100%";
+        img.style.objectFit = "contain";
+      });
 
+      current.textContent = String(index + 1).padStart(2, "0");
       prev.disabled = index === 0;
       next.disabled = index === images.length - 1;
     }
@@ -394,8 +396,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     updateCarousel();
-
   });
-
 });
-
