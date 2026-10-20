@@ -1659,3 +1659,32 @@ footer {
   }
 
 }
+/* SERVEO · PDF PREVIEW */
+
+.project-serveo {
+  overflow: hidden;
+}
+
+.serveo-pdf-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #e8e5dd;
+}
+
+.serveo-pdf-preview iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #e8e5dd;
+  pointer-events: none;
+}
+
+.project-serveo > a {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
