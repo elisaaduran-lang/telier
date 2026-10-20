@@ -1812,3 +1812,71 @@ footer {
   }
 }
 
+
+/* SERVEO — CARRUSEL */
+.serveo-carousel {
+  position: relative;
+  overflow: hidden;
+  background: #262626;
+  aspect-ratio: 16 / 9;
+}
+
+.serveo-carousel .serveo-carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.45s ease;
+}
+
+.serveo-carousel .serveo-carousel-track img {
+  display: block;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.serveo-carousel .serveo-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: #B6FF3B;
+  color: #111;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.serveo-carousel .serveo-prev {
+  left: 16px;
+}
+
+.serveo-carousel .serveo-next {
+  right: 16px;
+}
+
+.serveo-carousel .serveo-carousel-counter {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 5;
+  padding: 8px 12px;
+  background: #F3F0E8;
+  color: #111;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .serveo-carousel {
+    aspect-ratio: 4 / 5;
+  }
+
+  .serveo-carousel .serveo-carousel-btn {
+    width: 38px;
+    height: 38px;
+  }
+}
