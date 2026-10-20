@@ -346,37 +346,56 @@ document.addEventListener("DOMContentLoaded", () => {
     updateOrb();
   }});
 
-/* SERVEO — CAROUSEL CONTROLS */
 
-document.querySelectorAll(".serveo-carousel").forEach((carousel) => {
-  const track = carousel.querySelector(".serveo-carousel-track");
-  const images = track.querySelectorAll("img");
-  const current = carousel.querySelector(".serveo-current");
-  const prev = carousel.querySelector(".serveo-prev");
-  const next = carousel.querySelector(".serveo-next");
+/* -------------------------------------------------------
+   SERVEO — CAROUSEL CONTROLS
+------------------------------------------------------- */
 
-  function updateCounter() {
-    const index = Math.round(track.scrollLeft / track.clientWidth);
-    current.textContent = String(index + 1).padStart(2, "0");
-  }
+document.addEventListener("DOMContentLoaded", () => {
 
-  prev.addEventListener("click", (event) => {
-    event.stopPropagation();
-    track.scrollBy({
-      left: -track.clientWidth,
-      behavior: "smooth"
+  document.querySelectorAll(".serveo-carousel").forEach((carousel) => {
+
+    const track = carousel.querySelector(".serveo-carousel-track");
+    const images = Array.from(track.querySelectorAll("img"));
+    const current = carousel.querySelector(".serveo-current");
+    const prev = carousel.querySelector(".serveo-prev");
+    const next = carousel.querySelector(".serveo-next");
+
+    if (!track || !images.length || !current || !prev || !next) return;
+
+    let index = 0;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      current.textContent = String(index + 1).padStart(2, "0");
+
+      prev.disabled = index === 0;
+      next.disabled = index === images.length - 1;
+    }
+
+    prev.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (index > 0) {
+        index--;
+        updateCarousel();
+      }
     });
+
+    next.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (index < images.length - 1) {
+        index++;
+        updateCarousel();
+      }
+    });
+
+    updateCarousel();
+
   });
 
-  next.addEventListener("click", (event) => {
-    event.stopPropagation();
-    track.scrollBy({
-      left: track.clientWidth,
-      behavior: "smooth"
-    });
-  });
-
-  track.addEventListener("scroll", updateCounter, { passive: true });
-
-  updateCounter();
 });
+
