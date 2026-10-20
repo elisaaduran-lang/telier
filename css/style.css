@@ -1661,6 +1661,7 @@ footer {
 }
 
 
+
 /* SERVEO — PDF INTEGRADO */
 
 .project-serveo {
@@ -1671,8 +1672,7 @@ footer {
 .serveo-pdf-preview {
   position: relative;
   width: 100%;
-  height: min(75vw, 900px);
-  min-height: 500px;
+  height: clamp(480px, 65vw, 850px);
   overflow: hidden;
   background: #F3F0E8;
 }
@@ -1687,7 +1687,12 @@ footer {
 
 @media (max-width: 700px) {
   .serveo-pdf-preview {
-    height: 600px;
-    min-height: 0;
+    height: 420px;
+  }
+
+  .serveo-pdf-preview iframe {
+    width: 100%;
+    max-width: 100%;
   }
 }
+
