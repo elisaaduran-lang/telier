@@ -1884,3 +1884,34 @@ footer {
 .category-next a:hover .category-next-arrow {
   transform: translate(3px, -3px);
 }
+
+.category-next .next-arrow {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.category-next .next-arrow::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 6px;
+  right: 7px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+}
+
+.category-next .next-arrow::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 13px;
+  right: 7px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  transform-origin: right center;
+}
