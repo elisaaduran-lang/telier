@@ -1,6 +1,7 @@
-
+```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,37 +13,66 @@
 
 <body class="category-page">
 
+  <!-- CURSOR -->
+  <div class="cursor">
+    <span class="cursor-label"></span>
+  </div>
+
   <!-- HEADER -->
   <header class="category-header">
-    <a href="./index.html" class="category-back">← TELIER</a>
-    <div class="category-header-right">BY ELISA DURÁN</div>
+
+    <a href="./index.html" class="category-back">
+      ← TELIER
+    </a>
+
+    <div class="category-header-right">
+      <span>04</span>
+      <span>EVENTS</span>
+    </div>
+
   </header>
 
+  <!-- MAIN -->
   <main>
 
-    <!-- INTRODUCCIÓN -->
+    <!-- HERO -->
     <section class="category-hero">
 
-      <div class="category-header">
-        <span>04 / SELECTED WORK</span>
-        <span>EVENTS & EXPERIENCES</span>
+      <div class="category-hero-meta">
+        <span>04 / SERVICES</span>
+        <span>EVENTS / EXPERIENCES / ART DIRECTION</span>
       </div>
 
-      <h1 class="category-title">EVENTS<span>.</span></h1>
+      <h1 class="category-title">
+        EVENTS<span>.</span>
+      </h1>
 
-      <p>
-        Identidad visual, dirección de arte y piezas gráficas
-        para celebraciones y experiencias que merecen dejar huella.
-      </p>
+      <div class="category-intro">
+
+        <p>
+          Identidad visual, dirección de arte y piezas gráficas
+          para celebraciones y experiencias que merecen dejar huella.
+        </p>
+
+        <span class="category-scroll">
+          SCROLL TO EXPLORE ↓
+        </span>
+
+      </div>
 
     </section>
 
-    <!-- PROYECTOS -->
+    <!-- PROJECTS -->
     <section class="category-projects">
 
-      <!-- PROJECT 01 · BODA -->
+      <div class="category-projects-header">
+        <span>SELECTED WORK</span>
+        <span>03 PROJECTS</span>
+      </div>
+
+      <!-- PROJECT 01 · WEDDING INVITATIONS -->
       <article
-        class="category-project"
+        class="category-project project-featured"
         data-cursor="VIEW"
       >
 
@@ -62,10 +92,7 @@
 
           <div>
             <h2>WEDDING INVITATIONS</h2>
-
-            <span>
-              INVITACIONES / PAPELERÍA
-            </span>
+            <span>INVITACIONES / PAPELERÍA</span>
           </div>
 
           <span class="project-arrow">↗</span>
@@ -73,7 +100,6 @@
         </div>
 
       </article>
-
 
       <!-- PROJECT 02 · MARCESH -->
       <article
@@ -97,10 +123,7 @@
 
           <div>
             <h2>MARCESH</h2>
-
-            <span>
-              EVENTO TEMÁTICO / DIRECCIÓN DE ARTE
-            </span>
+            <span>EVENTO TEMÁTICO / DIRECCIÓN DE ARTE</span>
           </div>
 
           <span class="project-arrow">↗</span>
@@ -109,10 +132,9 @@
 
       </article>
 
-
       <!-- PROJECT 03 · MARCESH RODEO -->
       <article
-        class="category-project"
+        class="category-project project-featured"
         data-cursor="VIEW"
       >
 
@@ -132,10 +154,7 @@
 
           <div>
             <h2>MARCESH RODEO</h2>
-
-            <span>
-              EVENTO TEMÁTICO / MERCHANDISING
-            </span>
+            <span>EVENTO TEMÁTICO / MERCHANDISING</span>
           </div>
 
           <span class="project-arrow">↗</span>
@@ -146,16 +165,4 @@
 
     </section>
 
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer class="category-footer">
-    <a href="./index.html">TELIER — BY ELISA DURÁN</a>
-    <span>DISEÑADO CON INTENCIÓN.</span>
-  </footer>
-
-  <script src="./js/script.js"></script>
-
-</body>
-</html>
+    <!-- NEXT CATEGORY -->
