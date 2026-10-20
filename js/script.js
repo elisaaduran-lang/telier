@@ -345,3 +345,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateOrb();
   }});
+
+/* SERVEO — CAROUSEL CONTROLS */
+
+document.querySelectorAll(".serveo-carousel").forEach((carousel) => {
+  const track = carousel.querySelector(".serveo-carousel-track");
+  const images = track.querySelectorAll("img");
+  const current = carousel.querySelector(".serveo-current");
+  const prev = carousel.querySelector(".serveo-prev");
+  const next = carousel.querySelector(".serveo-next");
+
+  function updateCounter() {
+    const index = Math.round(track.scrollLeft / track.clientWidth);
+    current.textContent = String(index + 1).padStart(2, "0");
+  }
+
+  prev.addEventListener("click", (event) => {
+    event.stopPropagation();
+    track.scrollBy({
+      left: -track.clientWidth,
+      behavior: "smooth"
+    });
+  });
+
+  next.addEventListener("click", (event) => {
+    event.stopPropagation();
+    track.scrollBy({
+      left: track.clientWidth,
+      behavior: "smooth"
+    });
+  });
+
+  track.addEventListener("scroll", updateCounter, { passive: true });
+
+  updateCounter();
+});
