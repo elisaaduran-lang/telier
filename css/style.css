@@ -1696,3 +1696,30 @@ footer {
   }
 }
 
+/* ANIMALS — WEB PREVIEW */
+
+.animals-preview-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.animals-preview-link iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .animals-preview-link,
+  .animals-preview-link iframe {
+    min-height: 260px;
+  }
+}
+
